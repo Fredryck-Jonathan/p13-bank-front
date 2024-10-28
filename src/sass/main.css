@@ -1,0 +1,485 @@
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+* {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+.FeatureItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  gap: 20px;
+}
+.FeatureItem .feature-item-icon {
+  width: 100px;
+  border: 10px solid #00bc77;
+  border-radius: 50%;
+  padding: 20px;
+}
+.FeatureItem .feature-item-title {
+  color: #222;
+  font-weight: bold;
+}
+.TransactionItem {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 30px;
+  width: 80%;
+}
+.TransactionItem .transaction-item-infos .transaction-item-title, .TransactionItem .transaction-item-infos .transaction-item-description {
+  font-size: 15px;
+  font-weight: normal;
+  color: #2c3e50;
+}
+.TransactionItem .transaction-item-infos .transaction-item-amount {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+.TransactionItem .button-view-transactions {
+  width: 200px;
+  font-size: 17px;
+  padding: 8px;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+  .TransactionItem .button-view-transactions {
+    width: 100%;
+  }
+}
+.transactionDropdown {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 25px;
+  border: 2px solid #c3cfd9;
+}
+.transactionDropdown.active .trigger-part ion-icon {
+  transform: rotateX(180deg);
+}
+.transactionDropdown.active .menu-part {
+  display: grid;
+}
+.transactionDropdown .trigger-part {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  position: relative;
+  padding: 15px;
+  cursor: pointer;
+}
+.transactionDropdown .trigger-part:hover {
+  background-color: whitesmoke;
+}
+.transactionDropdown .trigger-part ion-icon {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  position: absolute;
+  left: 0px;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+.transactionDropdown .trigger-part .transaction-date {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.transactionDropdown .trigger-part .transaction-description {
+  font-size: 15px;
+}
+.transactionDropdown .trigger-part .transaction-amount {
+  font-size: 15px;
+}
+.transactionDropdown .trigger-part .transaction-balance {
+  font-size: 15px;
+}
+.transactionDropdown .menu-part {
+  background-color: white;
+  display: none;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  place-items: start;
+  position: relative;
+  padding: 15px;
+  padding-left: 50px;
+}
+.transactionDropdown .menu-part .transaction-type {
+  grid-row: 1/2;
+}
+.transactionDropdown .menu-part .transaction-category-div {
+  grid-row: 2/3;
+  display: flex;
+  gap: 10px;
+}
+.transactionDropdown .menu-part .transaction-category-div .transaction-edit-category {
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.transactionDropdown .menu-part .transaction-notes-div {
+  grid-row: 3/4;
+  display: flex;
+  gap: 10px;
+}
+.transactionDropdown .menu-part .transaction-notes-div .transaction-edit-notes {
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.home .heroSection {
+  background-image: url("../assets/bank-tree.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.home .heroSection .heroContent {
+  position: absolute;
+  right: 70px;
+  background-color: white;
+  width: 300px;
+  padding: 30px;
+  margin: auto;
+}
+.home .heroSection .heroContent .subtitles {
+  font-weight: bold;
+  font-size: 25px;
+}
+.home .heroSection .heroContent .text {
+  margin-top: 20px;
+  font-size: 20px;
+}
+.home .featureItemsSection {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 900px) {
+  .home .heroSection .heroContent {
+    position: relative;
+    right: auto;
+    width: 200px;
+  }
+  .home .heroSection .heroContent .subtitles {
+    font-weight: bold;
+    font-size: 17px;
+  }
+  .home .heroSection .heroContent .text {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+}
+.SignIn {
+  background-color: #12002b;
+  padding: 50px;
+  min-height: 70vh;
+  display: flex;
+}
+.SignIn .sign-in-content {
+  background-color: white;
+  margin-top: 20px;
+  padding: 25px 15px;
+  width: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.SignIn .sign-in-content ion-icon {
+  font-size: 20px;
+}
+.SignIn .sign-in-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.SignIn .sign-in-content form .input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.SignIn .sign-in-content form .input-wrapper label {
+  font-size: 17px;
+  font-weight: bold;
+}
+.SignIn .sign-in-content form .input-wrapper input {
+  font-size: 20px;
+  padding: 5px;
+}
+.SignIn .sign-in-content form .input-remember {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.SignIn .sign-in-content form .input-remember input {
+  cursor: pointer;
+}
+.SignIn .sign-in-content form .error_p {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+}
+.SignIn .sign-in-content form .input-submit {
+  color: white;
+  background-color: #00bc77;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  font-weight: bold;
+  font-size: 17px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.SignIn .sign-in-content form .input-submit:hover {
+  background-color: rgb(1, 136, 86);
+}
+
+.Error {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: #12002b;
+}
+.Error h3 {
+  font-size: 40px;
+  color: white;
+}
+.Error p {
+  font-size: 30px;
+  color: white;
+}
+.Error a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 3px solid #006e46;
+  background-color: #00bc77;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 15px;
+  color: #fff;
+}
+.Error a:hover {
+  background-color: #035738;
+}
+
+.UserPage {
+  background-color: #12002b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+  padding: 30px;
+}
+.UserPage h1 {
+  text-align: center;
+  color: white;
+}
+.UserPage .edit-name-div {
+  margin-bottom: 20px;
+}
+.UserPage .edit-name-div.active .edit-name-inactif {
+  display: none;
+}
+.UserPage .edit-name-div.active .edit-name-actif {
+  display: grid;
+}
+.UserPage .edit-name-div .edit-name-inactif {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.UserPage .edit-name-div .edit-name-inactif .edit-button {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  cursor: pointer;
+}
+.UserPage .edit-name-div .edit-name-actif {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+.UserPage .edit-name-div .edit-name-actif .edit-name-input-actif {
+  padding: 10px;
+  font-size: 17px;
+}
+.UserPage .edit-name-div .edit-name-actif .edit-name-button-actif {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  background-color: #00bc77;
+  border-color: #00bc77;
+  padding: 5px;
+  width: 70%;
+}
+.UserPage .edit-name-div .edit-name-actif .edit-name-button-actif:nth-of-type(1) {
+  justify-self: end;
+}
+.UserPage .section-transactions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.transactionPage {
+  background-color: #dfe6ed;
+  color: #283845;
+}
+.transactionPage .section-balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 15px;
+  background-color: white;
+  border: 2px solid #c3cfd9;
+}
+.transactionPage .section-balance .balance-title {
+  font-size: 14px;
+  font-weight: normal;
+}
+.transactionPage .section-balance .balance-amount {
+  font-size: 35px;
+}
+.transactionPage .section-balance .balance-description {
+  font-size: 13px;
+}
+.transactionPage .section-transactions {
+  padding: 20px;
+  color: #404e5a;
+  font-weight: bold;
+}
+.transactionPage .section-transactions .legend-transaction {
+  width: 80%;
+  margin: auto;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+}
+.transactionPage .section-transactions .legend-transaction p {
+  font-size: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: white;
+}
+.header #logo-link img {
+  width: 200px;
+}
+.header #sign-in-link {
+  color: #2c3e50;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+.header #sign-in-link:hover {
+  text-decoration: underline;
+}
+.header #sign-in-link ion-icon {
+  font-size: 20px;
+}
+.header #sign-out-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.header #sign-out-div #account-link {
+  color: #2c3e50;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  font-weight: bold;
+}
+.header #sign-out-div #account-link:hover {
+  text-decoration: underline;
+}
+.header #sign-out-div #account-link ion-icon {
+  font-size: 20px;
+}
+.header #sign-out-div #sign-out-link {
+  color: #2c3e50;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.header #sign-out-div #sign-out-link:hover {
+  text-decoration: underline;
+}
+.header #sign-out-div #sign-out-link ion-icon {
+  font-size: 20px;
+}
+
+.footer {
+  background-color: white;
+  text-align: center;
+  padding: 30px 10px 10px 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    padding: 10px 10px 10px 10px;
+  }
+}/*# sourceMappingURL=main.css.map */

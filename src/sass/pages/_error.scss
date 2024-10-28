@@ -1,0 +1,38 @@
+.Error{
+
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: #12002b;
+
+    h3{
+        font-size: 40px;
+        color: white;
+    }
+
+    p{
+        font-size: 30px;
+        color: white;
+    }
+
+    a{
+        display: inline-block;
+        padding: 10px 20px;
+        border: 3px solid #006e46;
+        background-color: #00bc77;
+        font-size: 17px;
+        font-weight: bold;
+        padding: 15px;
+        color: #fff;
+
+        &:hover{
+
+            background-color: #035738;
+
+        }
+    }
+
+}

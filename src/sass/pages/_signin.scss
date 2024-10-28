@@ -1,0 +1,90 @@
+.SignIn{
+    background-color: #12002b;
+    padding: 50px;
+    min-height: 70vh;
+    display: flex;
+
+    .sign-in-content{
+
+        background-color: white;
+        margin-top: 20px;
+        padding: 25px 15px;
+
+        width: 300px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+
+        ion-icon{
+            font-size: 20px;
+        }
+
+        form{
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .input-wrapper{
+                display: flex;
+                flex-direction: column;
+                label{
+
+                    font-size: 17px;
+                    font-weight: bold;
+
+                }
+                input{
+
+                    font-size: 20px;
+                    padding: 5px;
+
+                }
+
+            }
+
+            .input-remember{
+
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+
+                input{
+
+                    cursor: pointer;
+
+                }
+
+            }
+
+            .error_p{
+                color: rgb(255, 0, 0);
+                font-weight: bold;
+            }
+
+            .input-submit{
+
+                color: white;
+                background-color: #00BC77FF;
+                border: none;
+                padding: 10px 15px 10px 15px;
+                font-weight: bold;
+                font-size: 17px;
+                text-decoration: underline;
+                cursor: pointer;
+
+                &:hover{
+
+                    background-color: rgb(1, 136, 86);
+
+                }
+            }
+
+        }
+
+
+    }
+}

@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as  Router, Routes, Route} from 'react-router-dom';
+
+import Header from './layouts/Header';
+import Footer from './layouts/Footer';
+
+import SignIn from './pages/SignIn';
+import UserPage from './pages/UserPage';
+import Home from './pages/Home';
+import Error from './pages/Error';
+import TransactionPage from './pages/Transaction';
+import { useDispatch } from 'react-redux';
+import { tokenLocalStorage, postUserProfile } from './actions/user.action';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+    const dispatch = useDispatch()
+
+    const getTokenLocalStorage = () => {
+        const tokenLocalStorageData = localStorage.getItem('token');
+        console.log(tokenLocalStorageData)
+        if (tokenLocalStorageData) {
+            dispatch(tokenLocalStorage(tokenLocalStorageData));
+            dispatch(postUserProfile(tokenLocalStorageData));
+        }
+    }
+    getTokenLocalStorage()
+
+    return (
+        <Router>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<SignIn />} />
+                <Route path='/profile' element={<UserPage />} />
+                <Route path='/transaction' element={<TransactionPage/>}/>
+                <Route path="*" element={<Error />} />
+            </Routes>
+            <Footer />
+        </Router>
+    )
+}
 export default App;
+

@@ -1,0 +1,134 @@
+.transactionDropdown{
+
+    width: 80%;
+    margin: auto;
+    margin-bottom: 25px;
+    border: 2px solid #C3CFD9FF;
+
+    &.active{
+
+        .trigger-part{
+
+            ion-icon{
+
+                transform: rotateX(180deg);
+
+            }
+
+        }
+
+
+        .menu-part{
+            display: grid;
+        }
+
+    }
+
+
+    .trigger-part{
+
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        place-items: center;
+        position: relative;
+        padding: 15px;
+        cursor: pointer;
+        &:hover{
+
+            background-color: whitesmoke;
+
+        }
+
+        ion-icon{
+
+            grid-column: 1/2;
+            grid-row: 1/2;
+            position: absolute;
+            left: 0px;
+            font-weight: bold;
+            font-size: 15px;
+            transition: all 0.3s;
+
+        }
+
+        .transaction-date{
+            grid-column: 1/2;
+            grid-row: 1/2;
+
+        }
+
+        .transaction-description{
+            font-size: 15px;}
+
+        .transaction-amount{
+            font-size: 15px;
+        }
+
+        .transaction-balance{
+            font-size: 15px;
+        }
+
+    }
+
+    .menu-part{
+
+
+        background-color: white;
+        display: none;
+        grid-template-rows: 1fr 1fr 1fr ;
+        gap: 10px;
+        place-items: start;
+        position: relative;
+        padding: 15px;
+        padding-left: 50px;
+
+        .transaction-type{
+
+            grid-row: 1/2;
+
+        }
+
+
+        .transaction-category-div{
+
+            grid-row: 2/3;
+            display: flex;
+            gap: 10px;
+
+            .transaction-category{}
+            .transaction-edit-category{
+                font-size: 18px;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+            }
+
+        }
+
+        .transaction-notes-div{
+
+            grid-row: 3/4;
+            display: flex;
+            gap: 10px;
+
+
+            .transaction-notes{}
+            .transaction-edit-notes{
+
+                font-size: 18px;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+
+            }
+
+        }
+
+
+
+    }
+
+
+}

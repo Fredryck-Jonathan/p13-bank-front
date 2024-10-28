@@ -1,0 +1,99 @@
+.UserPage{
+
+    background-color: #12002b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
+    padding: 30px;
+
+    h1{
+
+        text-align: center;
+        color: white;
+
+    }
+
+    .edit-name-div{
+
+        margin-bottom: 20px;
+
+        &.active{
+            .edit-name-inactif{
+                display: none;
+            }
+            .edit-name-actif{
+                display: grid;
+            }
+        }
+
+        .edit-name-inactif{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+
+            .edit-button{
+                font-size: 14px;
+                font-weight: bold;
+                color: white;
+                padding: 10px;
+                border-color: #00bc77;
+                background-color: #00bc77;
+                cursor: pointer;
+            }
+
+
+        }
+
+        .edit-name-actif{
+
+            display: none;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 20px;
+
+            .edit-name-input-actif{
+
+                padding: 10px;
+                font-size: 17px;
+
+
+            }
+
+            .edit-name-button-actif{
+
+                font-size: 15px;
+                font-weight: bold;
+                color: white;
+                background-color: #00bc77;
+                border-color: #00bc77;
+                padding: 5px;
+                width: 70%;
+                
+            }
+
+            .edit-name-button-actif:nth-of-type(1){
+
+                justify-self: end;
+
+            }
+
+        }
+
+
+    }
+
+
+    .section-transactions{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+
+    }
+
+}

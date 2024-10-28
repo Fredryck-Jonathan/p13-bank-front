@@ -1,0 +1,52 @@
+.transactionPage{
+    background-color: #DFE6EDFF;
+    color: #283845FF;
+
+    .section-balance{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        padding: 15px;
+        background-color: white;
+        border: 2px solid #C3CFD9FF;
+
+        .balance-title{
+            font-size: 14px;
+            font-weight: normal;
+        }
+        .balance-amount{
+            font-size: 35px;
+        }
+        .balance-description{
+            font-size: 13px;
+        }
+    }
+
+    .section-transactions{
+        padding: 20px;
+        color: #404E5AFF;
+        font-weight: bold;
+
+        .legend-transaction{
+
+            width: 80%;
+            margin: auto;
+            padding: 5px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            place-items: center;
+
+            p{
+
+                font-size: 15px;
+
+            }
+
+        }
+
+
+
+    }
+
+}
