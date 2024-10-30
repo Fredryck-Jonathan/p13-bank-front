@@ -255,6 +255,7 @@ body {
 .SignIn .sign-in-content form .error_p {
   color: rgb(255, 0, 0);
   font-weight: bold;
+  font-size: 15px;
 }
 .SignIn .sign-in-content form .input-submit {
   color: white;

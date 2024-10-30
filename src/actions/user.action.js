@@ -37,7 +37,6 @@ export const deleteToken = () => {
     return (dispatch) => {
         dispatch({ type: DELETE_TOKEN})
     }
-
 }
 
 export const postUserProfile = (data) => {

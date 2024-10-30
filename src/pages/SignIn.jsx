@@ -26,7 +26,7 @@ function SignIn() {
             navigate('/profile')
         } else {
             const p_error = document.querySelector('.error_p');
-            p_error.textContent = res.message;
+            p_error.textContent = "Les champs renseignés sont incorrects. Merci de vérifier et de réessayer.";
             return false
         }
     }
